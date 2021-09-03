@@ -1,0 +1,206 @@
+<html>  
+<head>   
+<title> Nellie's Big Fat Plant Quiz of the Semester </title>  
+</head>  
+
+<style>
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:27px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+</style>
+
+<script>  
+function getRandomImage() {  
+//declare an array to store the images  
+var randomImage = new Array();  
+  
+//insert the URL of images in array  
+randomImage[0] = "images/1.jpg";  
+randomImage[1] = "images/2.jpg";  
+randomImage[2] = "images/3.jpg";  
+randomImage[3] = "images/4.jpg";
+randomImage[4] = "images/5.jpg";
+randomImage[5] = "images/6.jpg";
+randomImage[6] = "images/7.jpg";
+randomImage[7] = "images/8.jpg";
+randomImage[8] = "images/9.jpg";
+randomImage[9] = "images/10.jpg";
+randomImage[10] = "images/11.jpg";
+randomImage[11] = "images/12.jpg";
+randomImage[12] = "images/13.jpg";
+randomImage[13] = "images/14.jpg";
+randomImage[14] = "images/15.jpg";
+randomImage[15] = "images/16.jpg";
+randomImage[16] = "images/17.jpg";
+randomImage[17] = "images/18.jpg";
+randomImage[18] = "images/19.jpg";
+randomImage[19] = "images/20.jpg";
+randomImage[20] = "images/21.jpg";
+randomImage[21] = "images/22.jpg";
+randomImage[22] = "images/23.jpg";
+randomImage[23] = "images/24.jpg";
+randomImage[24] = "images/25.jpg";
+randomImage[25] = "images/26.jpg";
+randomImage[26] = "images/27.jpg";
+randomImage[27] = "images/28.jpg";
+randomImage[28] = "images/29.jpg";
+randomImage[29] = "images/30.jpg";
+randomImage[30] = "images/31.jpg";
+randomImage[31] = "images/32.jpg";
+randomImage[32] = "images/33.jpg";
+randomImage[33] = "images/34.jpg";
+randomImage[34] = "images/35.jpg";
+randomImage[35] = "images/36.jpg";
+randomImage[36] = "images/37.jpg";
+randomImage[37] = "images/38.jpg";
+randomImage[38] = "images/39.jpg";
+randomImage[39] = "images/40.jpg";
+randomImage[40] = "images/41.jpg";
+randomImage[41] = "images/42.jpg";
+randomImage[42] = "images/43.jpg";
+randomImage[43] = "images/44.jpg";
+randomImage[44] = "images/45.jpg";
+randomImage[45] = "images/46.jpg";
+randomImage[46] = "images/47.jpg";
+randomImage[47] = "images/48.jpg";
+randomImage[48] = "images/49.jpg";
+randomImage[49] = "images/50.jpg";
+randomImage[50] = "images/51.jpg";
+randomImage[51] = "images/52.jpg";
+
+
+
+//insert the answers in array  
+var randomAnswer = new Array();  
+ 
+randomAnswer[0] = "MYRTACEAE <i>Agonis flexuosa</i> <br><br> WA Willow Myrtle<br><br>"
+randomAnswer[1] = "<i>Elaeocarpus eumundi</i> <br><br> Eumundi Quandong<br><br>"
+randomAnswer[2] = "<i>Elaeocarpus reticulatus</i> <br><br> Blue Berry Ash<br><br>"
+randomAnswer[3] = "<i>Ceratopetalum gummiferum</i> <br><br> NSW Christmas Bush<br><br>"
+randomAnswer[4] = "<i>Xanthorrhoea spp.</i> <br><br> Grass Tree<br><br>"
+randomAnswer[5] = "<i>Dianella spp. & cvs.</i> <br><br> Blue Flax Lily<br><br>"
+randomAnswer[6] = "<i>Anigozanthos spp. & cvs</i> <br><br> Kangaroo Paw<br><br>"
+randomAnswer[7] = "<i>Doryanthes excelsa</i> <br><br> Gymea Lily<br><br>"
+
+randomAnswer[8] = "FABACEAE subf. FABOIDEAE <i>Hardenbergia violacea</i> <br><br> Purple Coral Pea, False Sarsaparilla<br><br>"
+randomAnswer[9] = "BIGNONIACEAE <i>Pandorea pandorana</i> <br><br> Wonga Wonga Vine<br><br>"
+randomAnswer[10] = "BIGNONIACEAE <i>Pandorea jasminoides</i> <br><br> Bower Vine<br><br>"
+randomAnswer[11] = "RUTACEAE <i>Philotheca myoporoides </i><br><br> Long Leaf Wax Flower<br><br>"
+randomAnswer[12] = "RUTACEAE <i>Correa alba</i> <br><br> White Correa<br><br>"
+randomAnswer[13] = "PROTEACEAE <i>Banksia spinulosa</i> <br><br> Hairpin Banksia<br><br>"
+randomAnswer[14] = "<i>Scaevola cvs.</i> <br><br> Fan Flowers<br><br>"
+randomAnswer[15] = "<i>Crinum pedunculatum</i> <br><br> Swamp Lily<br><br>"
+
+randomAnswer[16] = "ASTERACEAE <i>Helichrysum petiolare</i> <br><br> Liquorice or Licorice Plant<br><br>"
+randomAnswer[17] = "ASTERACEAE <i>Artemisia spp. & cvs</i> <br><br> Wormwood, Tarragon<br><br>"
+randomAnswer[18] = "LAMIACEAE <i>Teucrium fruticans</i> <br><br> Germander<br><br>"
+randomAnswer[19] = "LAMIACEAE <i>Nepeta x faassenii</i> <br><br> Catmint<br><br>"
+randomAnswer[20] = "<i>Convolvulus sabatius ssp. mauritanicus</i> <br><br> Ground Morning Glory<br><br>"
+randomAnswer[21] = "<i>Convolvulus cneorum</i> <br><br> Silver Bush or Silver Convolvulus<br><br>"
+randomAnswer[22] = "<i>Beschorneria yuccoides</i> <br><br> Mexican Lily<br><br>"
+
+randomAnswer[23] = "MYRTACEAE <i>Metrosideros spp. & cvs</i> <br><br> New Zealand Christmas Bush, Pohutakawa<br><br>"
+randomAnswer[24] = "<i>Dracaena draco</i> <br><br> Dragon Tree / Dragon&apos;s Blood Tree<br><br>"
+randomAnswer[25] = "<i>Hibbertia scandens</i> <br><br> Snake Vine<br><br>"
+randomAnswer[26] = "ASTERACEAE <i>Arctotis hybrids</i> <br><br> Aurora Daisy<br><br>"
+randomAnswer[27] = "<i>Carpobrotus glaucescens</i> <br><br> Pig Face<br><br>"
+randomAnswer[28] = "<i>Echium fastuosum</i> <br><br> Pride of Maderia<br><br>"
+randomAnswer[29] = "<i>Russelia equisetiformis</i> <br><br> Coral Plant<br><br>"
+randomAnswer[30] = "ASTERACEAE <i>Osteospermum spp.</i> <br><br> Veldt Daisy<br><br>"
+randomAnswer[31] = "<i>Gaura lindheimeri cvs</i> <br><br> Gaura / Butterfly Plant<br><br>"
+
+randomAnswer[32] = "FABACEAE subf. CAESALPINIOIDEAE <i>Cercis Canadensis &apos;Forest Pansy&apos;</i> <br><br> Forest pansy, Eastern Redbud<br><br>"
+randomAnswer[33] = "ROSACEAE <i>Prunus cerasifera &apos;Nigra&apos;</i> <br><br> Black Cherry Plum<br><br>"
+randomAnswer[34] = "ROSACEAE <i>Prunus campanulata</i> <br><br> Taiwan Cherry<br><br>"
+randomAnswer[35] = "ROSACEAE <i>Malus x floribunda</i> <br><br> Japanese Crabapple<br><br>"
+randomAnswer[36] = "ROSACEAE <i>Prunus serrulata cvs</i> <br><br> Japanese Flowering Cherry<br><br>"
+randomAnswer[37] = "ROSACEAE <i>Pyrus calleryana</i> <br><br> Callery Pear, Chinese wild Pear<br><br>"
+randomAnswer[38] = "ROSACEAE <i>Prunus x blireana</i> <br><br> Blireana<br><br>"
+randomAnswer[39] = "ROSACEAE <i>Prunus persica cvs</i> <br><br> Flowering Peach<br><br>"
+
+randomAnswer[40] = "AMARYLLIDACEAE <i>Hippeastrum vittatum</i> <br><br> Hippeastrum<br><br>"
+randomAnswer[41] = "IRIDACEAE <i>Iris x germanica</i> <br><br> Bearded Iris<br><br>"
+randomAnswer[42] = "LILIACEAE <i>Hosta cvs</i> <br><br> Hosta, Plantain Lily<br><br>"
+randomAnswer[43] = "IRIDACEAE <i>Iris Louisiana Hybrids</i> <br><br>Louisiana Iris<br><br>"
+randomAnswer[44] = "<i>Myosotis sylvatica</i> <br><br> Forget-me-not<br><br>"
+randomAnswer[45] = "IRIDACEAE <i>Iris xiphium hybrids</i> <br><br> Dutch Iris<br><br>"
+
+randomAnswer[46] = "<i>Rondeletia amoena</i> <br> Rondeletia<br><br>"
+randomAnswer[47] = "SOLANACEAE - <i>Brunfelsia spp. & cvs</i> <br><br> Yesterday, Today,Tomorrow<br><br>"
+randomAnswer[48] = "<i>Loropetalum chinense & cvs</i> <br><br> Fringe Flower<br><br>"
+randomAnswer[49] = "ASTERACEAE - <i>Bartlettina sordida syn. Eupatorium megalophyllum</i> <br><br> Large Mist Flower<br><br>"
+randomAnswer[50] = "<i>Heliotropium arborescens</i> <br><br> Heliotrope, Cherry Pie<br><br>"
+randomAnswer[51] = "OLEACEAE - <i>Osmanthus fragrans.</i> <br><br> Osmanthus, Sweet Olive<br><br>"
+ 
+
+
+//generate a number and provide to the image to generate randomly  
+var number = Math.floor(Math.random()*randomImage.length);  
+  
+//return the images generated by a random number  
+document.getElementById("answer").style = "display:none;"
+document.getElementById("result").style = "display:block;"
+document.getElementById("result").innerHTML = '<a href="javascript:void(0);" onclick="showAnswer();"><img width="1000" src="'+randomImage[number]+'"</a>';  
+document.getElementById("answer").innerHTML = randomAnswer[number];  
+document.getElementById("showbutton").style = "display:block;"
+}  
+
+
+function showAnswer() {
+document.getElementById("result").style = "display:none;"
+document.getElementById("answer").style = "display:block;"
+}
+  
+</script>  
+<body>  
+<center><h1 style="color:green"> Nellie's Big Fat Plant Quiz of the Semester </h1></center>  
+  
+   
+
+<br> <br>  
+<span id="result" align="center"> </span>   
+<br> <br> 
+<!-- <button id="showbutton" onclick = "showAnswer()" style="display:none"> Show answer! </button>  -->
+<h2><span id="answer" align="center" style="display:none;"> </span> </h2>
+
+
+
+<div class="wrapper">
+    <button class="myButton" onclick = "getRandomImage()"> Show new plant! </button>
+</div>
+
+
+</body>    
+</html>  
